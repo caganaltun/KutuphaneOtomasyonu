@@ -1,0 +1,133 @@
+.root, .split-pane, .anchor-pane, .region {
+    -fx-background-color: #1e1e1e !important; /* !important ile zorluyoruz */
+    -fx-font-family: 'Consolas', 'Segoe UI', sans-serif;
+}
+
+.label {
+    -fx-text-fill: #d4d4d4;
+    -fx-font-size: 13px;
+}
+
+.header-label {
+    -fx-text-fill: #fbfbfb;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: #3c3c3c;
+    -fx-text-fill: #cccccc;
+    -fx-prompt-text-fill: #858585;
+    -fx-background-radius: 2;
+    -fx-border-color: #3c3c3c;
+    -fx-border-width: 1;
+}
+.text-field:focused {
+    -fx-border-color: #007acc;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 2;
+    -fx-cursor: hand;
+    -fx-padding: 5 15 5 15;
+}
+
+#btnAdd { -fx-background-color: #007acc; }
+#btnAdd:hover { -fx-background-color: #0062a3; }
+
+#btnUpdate { -fx-background-color: #ce9178; }
+#btnUpdate:hover { -fx-background-color: #a87b6a; }
+
+#btnDelete { -fx-background-color: #f48771; -fx-text-fill: #3e1616; }
+#btnDelete:hover { -fx-background-color: #d66c5d; }
+
+.table-view {
+    -fx-background-color: #1e1e1e; /* Tablonun dış çerçevesi */
+    -fx-border-color: #1e1e1e;
+}
+
+.table-view .virtual-flow .clipped-container {
+    -fx-background-color: #1e1e1e;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #252526;
+    -fx-border-color: transparent transparent #3e3e42 transparent;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #0b0a0a;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #1e1e1e;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: transparent;
+}
+.table-row-cell:hover {
+    -fx-background-color: #2a2d2e;
+}
+.table-view:focused .table-row-cell:filled:selected {
+    -fx-background-color: #094771;
+    -fx-text-fill: white;
+}
+.table-row-cell:filled:selected {
+    -fx-background-color: #37373d;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #ffffff;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+.increment-button, .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0em;
+}
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #424242;
+    -fx-background-radius: 5em;
+}
+
+.table-cell {
+    -fx-text-fill: #ffffff !important; /* Zorla Beyaz Olsun */
+    -fx-alignment: CENTER-LEFT; /* Yazıları sola hizala */
+    -fx-font-size: 13px;
+}
+
+.table-view:focused .table-row-cell:filled:selected .table-cell {
+    -fx-text-fill: #ffffff;
+}
+
+.table-row-cell:hover .table-cell {
+    -fx-text-fill: #ffffff;
+}
+
+
+.combo-box {
+    -fx-background-color: #3c3c3c;
+    -fx-border-color: #3c3c3c;
+    -fx-text-fill: #cccccc;
+}
+.combo-box .cell {
+    -fx-text-fill: #cccccc;
+    -fx-background-color: transparent;
+}
+.combo-box .list-cell {
+    -fx-background-color: #252526;
+    -fx-text-fill: #cccccc;
+}
+.combo-box .list-cell:hover {
+    -fx-background-color: #094771;
+}

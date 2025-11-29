@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cagan.controller.MainController">
+    <children>
+        <SplitPane dividerPositions="0.35" layoutX="14.0" layoutY="14.0" prefHeight="420.0" prefWidth="670.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" styleClass="header-label" text="Kitap Ekleme Paneli">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+
+                        <Label layoutX="14.0" layoutY="52.0" text="Kitap Adı" />
+                        <TextField fx:id="txtTitle" layoutX="14.0" layoutY="70.0" prefHeight="25.0" prefWidth="190.0" promptText="Örn: Suç ve Ceza" />
+
+                        <Label layoutX="13.0" layoutY="112.0" text="Yazar Adı" />
+                        <TextField fx:id="txtAuthor" layoutX="14.0" layoutY="130.0" prefHeight="25.0" prefWidth="190.0" promptText="Örn: Dostoyevski" />
+
+                        <Label layoutX="16.0" layoutY="228.0" text="Kategori" />
+                        <ComboBox fx:id="comboCategory" layoutX="14.0" layoutY="246.0" prefHeight="25.0" prefWidth="190.0" promptText="Kategori Seçiniz" />
+
+                        <Button fx:id="btnAdd" layoutX="14.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="30.0" prefWidth="80.0" text="Ekle" />
+                        <Button fx:id="btnDelete" layoutX="124.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="30.0" prefWidth="80.0" text="Sil" />
+                        <Button fx:id="btnUpdate" layoutX="14.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="30.0" prefWidth="190.0" text="Bilgileri Güncelle" />
+                  <TextField fx:id="txtPageCount" layoutX="13.0" layoutY="190.0" prefHeight="26.0" prefWidth="190.0" promptText="Örn: 200" />
+                  <Label layoutX="14.0" layoutY="172.0" text="Sayfa Sayısı" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <TextField fx:id="txtSearch" layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="410.0" promptText="Kitap, Yazar veya Kategori Ara..." />
+
+                        <TableView fx:id="tableBooks" layoutX="10.0" layoutY="50.0" prefHeight="360.0" prefWidth="410.0">
+                            <columns>
+                                <TableColumn fx:id="colId" prefWidth="25.599977493286133" text="ID" />
+                                <TableColumn fx:id="colTitle" prefWidth="114.39989471435547" text="Kitap Adı" />
+                                <TableColumn fx:id="colAuthor" prefWidth="95.20001220703125" text="Yazar" />
+                                <TableColumn fx:id="colCategory" prefWidth="95.19998168945312" text="Kategori" />
+                        <TableColumn fx:id="colPageCount" prefWidth="100.800048828125" text="Sayfa" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
